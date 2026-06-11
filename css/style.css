@@ -808,7 +808,7 @@ cite   { font-style:normal; }
 /* ─ Mobile ─────────────────── max 480px ─ */
 @media (max-width: 480px) {
   .s-intro        { justify-content:center; }
-  .s-intro::before { background:rgba(228,242,237,.88); }
+  .s-intro::before {background: rgb(228 242 237 / 63%);}
   .intro-body  { padding:2.5rem 1.75rem; max-width:none; align-items:center; text-align:center; }
   .intro-hl    { font-size:3.25em; }
   .intro-sub   { font-size:.875rem; }
@@ -830,13 +830,19 @@ cite   { font-style:normal; }
   .ms1 .ms-aside    { display:none; }
   .ms2 .ms-num,.ms2 .ms-body,.ms2 .ms-img { order:0; }
   .ms2 .ms-img      { display:block; width:100%; margin-top:.5rem; }
+  .ms2              { grid-template-columns:1fr auto; }
+  .ms2 .ms-num      { align-self:center; }
+  .ms2 .ms-img      { grid-column:1 / -1; }
   .voz-2            { margin-left:0; }
   .perguntas-inner  { grid-template-columns:1fr; }
   .perguntas-sticky { position:static; }
   .contato-inner    { grid-template-columns:1fr; }
-  .footer-inner     { grid-template-columns:1fr; gap:2.5rem; padding-top:3rem; padding-bottom:3rem; }
+  .footer-inner     { grid-template-columns:1fr; gap:2.5rem; padding-top:3rem; padding-bottom:3rem; text-align:center; }
   .footer-brand-desc { max-width:none; }
-  .footer-bottom    { flex-direction:column; align-items:flex-start; gap:.5rem; }
+  .footer-col nav   { align-items:center; }
+  .footer-socials   { justify-content:center; }
+  .footer-contact-info { text-align:center; }
+  .footer-bottom    { flex-direction:column; align-items:center; gap:.5rem; }
 }
 
 /* ─ Extra small ─────────── 481px – 767px ─ */
@@ -864,13 +870,19 @@ cite   { font-style:normal; }
   .ms1 .ms-aside    { display:none; }
   .ms2 .ms-num,.ms2 .ms-body,.ms2 .ms-img { order:0; }
   .ms2 .ms-img      { display:block; width:100%; margin-top:.5rem; }
+  .ms2              { grid-template-columns:1fr auto; }
+  .ms2 .ms-num      { align-self:center; }
+  .ms2 .ms-img      { grid-column:1 / -1; }
   .voz-2            { margin-left:0; }
   .perguntas-inner  { grid-template-columns:1fr; }
   .perguntas-sticky { position:static; }
   .contato-inner    { grid-template-columns:1fr; }
-  .footer-inner     { grid-template-columns:1fr; gap:2.5rem; padding-top:3.5rem; padding-bottom:3.5rem; }
+  .footer-inner     { grid-template-columns:1fr; gap:2.5rem; padding-top:3.5rem; padding-bottom:3.5rem; text-align:center; }
   .footer-brand-desc { max-width:none; }
-  .footer-bottom    { flex-direction:column; align-items:flex-start; gap:.5rem; }
+  .footer-col nav   { align-items:center; }
+  .footer-socials   { justify-content:center; }
+  .footer-contact-info { text-align:center; }
+  .footer-bottom    { flex-direction:column; align-items:center; gap:.5rem; }
 }
 
 /* ─ Small tablets ────────── 768px – 991px ─ */
